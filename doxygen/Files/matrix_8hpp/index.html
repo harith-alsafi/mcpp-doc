@@ -615,24 +615,6 @@
                 <span class="p">}</span>
             <span class="p">}</span>
 
-            <span class="n">matrix</span> <span class="n">M</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="n">matrix</span> <span class="o">&amp;</span><span class="n">other</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">matrix</span> <span class="nf">b</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">row</span><span class="p">()</span><span class="mi">-1</span><span class="p">,</span> <span class="n">other</span><span class="p">.</span><span class="n">col</span><span class="p">()</span><span class="mi">-1</span><span class="p">);</span>
-                <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-                <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ii</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ii</span> <span class="o">&lt;</span> <span class="n">other</span><span class="p">.</span><span class="n">row</span><span class="p">();</span> <span class="n">ii</span><span class="o">++</span><span class="p">){</span>
-                    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">jj</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">jj</span> <span class="o">&lt;</span> <span class="n">other</span><span class="p">.</span><span class="n">col</span><span class="p">();</span> <span class="n">jj</span><span class="o">++</span><span class="p">){</span>
-                        <span class="k">if</span><span class="p">(</span><span class="n">ii</span> <span class="o">!=</span> <span class="n">i</span> <span class="o">&amp;&amp;</span> <span class="n">jj</span> <span class="o">!=</span> <span class="n">j</span><span class="p">){</span>
-                            <span class="n">b</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">other</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="n">jj</span><span class="p">];</span>
-                            <span class="n">c</span><span class="o">++</span><span class="p">;</span>
-                        <span class="p">}</span>
-                    <span class="p">}</span>
-                    <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">ii</span> <span class="o">!=</span> <span class="n">i</span><span class="p">){</span>
-                        <span class="n">r</span><span class="o">++</span><span class="p">;</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
-                <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
-            <span class="p">}</span>
 
             <span class="n">D</span> <span class="n">DET</span><span class="p">(</span><span class="n">matrix</span> <span class="n">a</span><span class="p">){</span>
                 <span class="c1">// 2x2 determinant</span>
@@ -690,6 +672,22 @@
                 <span class="k">return</span> <span class="n">_col</span><span class="o">*</span><span class="n">_row</span><span class="p">;</span>
             <span class="p">}</span>
 
+            <span class="k">auto</span> <span class="n">begin</span><span class="p">(){</span>
+                <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="k">auto</span> <span class="n">end</span><span class="p">(){</span>
+                <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="k">auto</span> <span class="n">begin</span><span class="p">()</span> <span class="k">const</span><span class="p">{</span>
+                <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+            <span class="p">}</span>
+
+            <span class="k">auto</span> <span class="n">end</span><span class="p">()</span> <span class="k">const</span><span class="p">{</span>
+                <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
+            <span class="p">}</span>
+
             <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">D</span><span class="o">&gt;</span> <span class="n">get_row</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span>
                 <span class="n">check_row</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
                 <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
@@ -703,6 +701,7 @@
                 <span class="p">}</span>
                 <span class="k">return</span> <span class="n">temp</span><span class="p">;</span>
             <span class="p">}</span>
+
 
 
             <span class="kt">void</span> <span class="n">resize</span><span class="p">(</span><span class="kt">int</span> <span class="n">r</span><span class="p">,</span> <span class="kt">int</span> <span class="n">c</span><span class="p">){</span>
@@ -905,6 +904,26 @@
                 <span class="k">return</span> <span class="n">temp</span><span class="p">;</span>
             <span class="p">}</span>
 
+
+            <span class="n">matrix</span> <span class="n">M</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="kt">int</span> <span class="n">j</span><span class="p">,</span> <span class="n">matrix</span> <span class="o">&amp;</span><span class="n">other</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">matrix</span> <span class="nf">b</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">row</span><span class="p">()</span><span class="mi">-1</span><span class="p">,</span> <span class="n">other</span><span class="p">.</span><span class="n">col</span><span class="p">()</span><span class="mi">-1</span><span class="p">);</span>
+                <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">ii</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">ii</span> <span class="o">&lt;</span> <span class="n">other</span><span class="p">.</span><span class="n">row</span><span class="p">();</span> <span class="n">ii</span><span class="o">++</span><span class="p">){</span>
+                    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">jj</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">jj</span> <span class="o">&lt;</span> <span class="n">other</span><span class="p">.</span><span class="n">col</span><span class="p">();</span> <span class="n">jj</span><span class="o">++</span><span class="p">){</span>
+                        <span class="k">if</span><span class="p">(</span><span class="n">ii</span> <span class="o">!=</span> <span class="n">i</span> <span class="o">&amp;&amp;</span> <span class="n">jj</span> <span class="o">!=</span> <span class="n">j</span><span class="p">){</span>
+                            <span class="n">b</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">other</span><span class="p">[</span><span class="n">ii</span><span class="p">][</span><span class="n">jj</span><span class="p">];</span>
+                            <span class="n">c</span><span class="o">++</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                    <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">ii</span> <span class="o">!=</span> <span class="n">i</span><span class="p">){</span>
+                        <span class="n">r</span><span class="o">++</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="n">b</span><span class="p">;</span>
+            <span class="p">}</span>
+
             <span class="n">matrix</span> <span class="n">adj</span><span class="p">(){</span>
                 <span class="n">square</span><span class="p">();</span>
                 <span class="n">matrix</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">cofactor</span><span class="p">();</span>
@@ -923,6 +942,10 @@
 
             <span class="kt">bool</span> <span class="n">is_square</span><span class="p">(){</span>
                 <span class="k">return</span> <span class="n">_row</span> <span class="o">==</span> <span class="n">_col</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="kt">bool</span> <span class="n">is_empty</span><span class="p">(){</span>
+                <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
             <span class="p">}</span>
 
             <span class="kt">bool</span> <span class="n">is_identity</span><span class="p">(){</span>
@@ -947,8 +970,6 @@
             <span class="p">}</span>
 
 <span class="c1">// ***************************** [] operator ************************** //</span>
-
-
 
             <span class="n">Col</span> <span class="k">operator</span><span class="p">[](</span><span class="kt">int</span> <span class="n">i</span><span class="p">){</span>
                 <span class="k">return</span> <span class="nf">Col</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
@@ -1066,7 +1087,6 @@
             <span class="n">matrix</span> <span class="k">operator</span> <span class="o">/</span><span class="p">(</span><span class="n">D</span> <span class="n">n</span><span class="p">){</span>
                 <span class="n">matrix</span> <span class="nf">temp</span><span class="p">(</span><span class="n">_row</span><span class="p">,</span> <span class="n">_col</span><span class="p">);</span>
                 <span class="n">temp</span><span class="p">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">;</span>
-
                 <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_row</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
                     <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">_col</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
                         <span class="n">temp</span><span class="p">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="n">n</span><span class="p">;</span>
@@ -1086,6 +1106,7 @@
             <span class="p">}</span>
 
 <span class="c1">// ***************************** % operator ************************** //</span>
+
             <span class="n">matrix</span> <span class="k">operator</span> <span class="o">%</span><span class="p">(</span><span class="n">D</span> <span class="n">n</span><span class="p">){</span>
                 <span class="n">matrix</span> <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
                 <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">_row</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -1191,7 +1212,7 @@
 <span class="p">};</span>
 </code></pre></div>
 <hr />
-<p>Updated on 10 May 2021 at 00:23:32 EEST</p>
+<p>Updated on 10 May 2021 at 05:32:58 EEST</p>
                 
                   
                 
