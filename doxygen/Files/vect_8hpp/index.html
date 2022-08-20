@@ -684,7 +684,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="../../Namespaces/namespacevect/">vect</a></strong> <br>Contains functions regarding vector operations.</td>
+<td><strong><a href="../../Namespaces/namespacevect/">vect</a></strong> <br>Contains functions regarding vector operations and 1D array mathematics.</td>
 </tr>
 </tbody>
 </table>
@@ -699,7 +699,7 @@
 <tbody>
 <tr>
 <td>template &lt;typename D > <br>std::vector&lt; D &gt;</td>
-<td><strong><a href="./#function-round">round</a></strong>(std::vector&lt; D &gt; &amp; a, int dp =0)<br>rounding the vector</td>
+<td><strong><a href="./#function-round">round</a></strong>(std::vector&lt; D &gt; &amp; a, int dp =0)<br>Rounding the vector by using <a href="../Namespaces/namespacemth.md#function-round">mth::round</a>.</td>
 </tr>
 <tr>
 <td>template &lt;typename D > <br>D</td>
@@ -712,6 +712,10 @@
 <tr>
 <td>template &lt;typename D > <br>D</td>
 <td><strong><a href="./#function-sum">sum</a></strong>(std::vector&lt; D &gt; &amp; a)</td>
+</tr>
+<tr>
+<td>template &lt;typename D > <br>std::vector&lt; D &gt;</td>
+<td><strong><a href="./#function-sort_asc">sort_asc</a></strong>(std::vector&lt; D &gt; &amp; a)</td>
 </tr>
 <tr>
 <td>template &lt;typename D > <br>std::vector&lt; D &gt;</td>
@@ -869,17 +873,17 @@
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dp</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p>rounding the vector </p>
+<p>Rounding the vector by using <a href="../Namespaces/namespacemth.md#function-round">mth::round</a>. </p>
 <p><strong>Parameters</strong>: </p>
 <ul>
-<li><strong>a</strong> </li>
-<li><strong>dp</strong> </li>
+<li><strong>a</strong> vector input </li>
+<li><strong>dp</strong> number of decimal places </li>
 </ul>
 <p><strong>Template Parameters</strong>: </p>
 <ul>
-<li><strong>D</strong> </li>
+<li><strong>D</strong> Type </li>
 </ul>
-<p><strong>Return</strong>: std::vector<D> </p>
+<p><strong>Return</strong>: std::vector<D>: vector output </p>
 <h3 id="function-min">function min</h3>
 <div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <span class="n">D</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="w"></span>
@@ -895,6 +899,12 @@
 <h3 id="function-sum">function sum</h3>
 <div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <span class="n">D</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<h3 id="function-sort_asc">function sort_asc</h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">sort_asc</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </code></pre></div>
@@ -1175,8 +1185,6 @@
 <h2 id="source-code">Source code</h2>
 <div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;../mathematic/mathematic.hpp&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">vect</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -1214,6 +1222,11 @@
 <span class="w">            </span><span class="n">sm</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sm</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">D</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sort_asc</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">D</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="o">&gt;</span><span class="w"></span>
@@ -1438,7 +1451,7 @@
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 10 August 2022 at 22:52:13 EEST</p>
+<p>Updated on 20 August 2022 at 21:24:15 EEST</p>
 
               
             </article>

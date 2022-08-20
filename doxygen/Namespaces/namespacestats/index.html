@@ -675,11 +675,117 @@
 
 <h1 id="stats">stats</h1>
 <p>Statistical functions.  <a href="#detailed-description">More...</a></p>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>template &lt;typename D > <br>D</td>
+<td><strong><a href="./#function-get_avg">get_avg</a></strong>(std::vector&lt; D &gt; a)<br>Get the avgerage of vector.</td>
+</tr>
+<tr>
+<td>template &lt;typename D > <br>D</td>
+<td><strong><a href="./#function-get_var">get_var</a></strong>(std::vector&lt; D &gt; a)<br>Get the variance object.</td>
+</tr>
+<tr>
+<td>template &lt;typename D > <br>D</td>
+<td><strong><a href="./#function-get_std">get_std</a></strong>(std::vector&lt; D &gt; a)<br>Get the standard diviation of vector.</td>
+</tr>
+<tr>
+<td>template &lt;typename D > <br><a href="../Classes/structvar_1_1QR.md">var::QR</a>&lt; D &gt;</td>
+<td><strong><a href="./#function-get_qr">get_qr</a></strong>(std::vector&lt; D &gt; a)<br>Get the quartile range of a vector.</td>
+</tr>
+<tr>
+<td>template &lt;typename D > <br>D</td>
+<td><strong><a href="./#function-get_r">get_r</a></strong>(std::vector&lt; D &gt; x, std::vector&lt; D &gt; y)<br>Get the corelation coefficient of two vectors.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="detailed-description">Detailed Description</h2>
 <p>Statistical functions. </p>
 <p>Short for STATiStics </p>
+<h2 id="functions-documentation">Functions Documentation</h2>
+<h3 id="function-get_avg">function get_avg</h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">D</span><span class="w"> </span><span class="n">get_avg</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Get the avgerage of vector. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>a</strong> input vector </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>D</strong> Type </li>
+</ul>
+<p><strong>Return</strong>: D: output average </p>
+<h3 id="function-get_var">function get_var</h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">D</span><span class="w"> </span><span class="n">get_var</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Get the variance object. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>a</strong> input vector </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>D</strong> Type </li>
+</ul>
+<p><strong>Return</strong>: D: output variance </p>
+<h3 id="function-get_std">function get_std</h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">D</span><span class="w"> </span><span class="n">get_std</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Get the standard diviation of vector. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>a</strong> input vector </li>
+</ul>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>D</strong> Type </li>
+</ul>
+<p><strong>Return</strong>: D: output standard diviation </p>
+<h3 id="function-get_qr">function get_qr</h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">var</span><span class="o">::</span><span class="n">QR</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">get_qr</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Get the quartile range of a vector. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>a</strong> input vector </li>
+</ul>
+<p><strong>Return</strong>: <code>QR</code>: the quartile range </p>
+<h3 id="function-get_r">function get_r</h3>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
+<span class="n">D</span><span class="w"> </span><span class="n">get_r</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Get the corelation coefficient of two vectors. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>x</strong> x vector </li>
+<li><strong>y</strong> y vector </li>
+</ul>
+<p><strong>Return</strong>: D: corelation coefficient </p>
 <hr />
-<p>Updated on 10 August 2022 at 22:52:13 EEST</p>
+<p>Updated on 20 August 2022 at 21:24:15 EEST</p>
 
               
             </article>

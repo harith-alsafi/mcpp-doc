@@ -643,6 +643,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#function-col_swap" class="md-nav__link">
+    function col_swap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#function-replace_row" class="md-nav__link">
     function replace_row
   </a>
@@ -652,13 +659,6 @@
           <li class="md-nav__item">
   <a href="#function-replace_col" class="md-nav__link">
     function replace_col
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-col_swap" class="md-nav__link">
-    function col_swap
   </a>
   
 </li>
@@ -1488,7 +1488,7 @@
 </thead>
 <tbody>
 <tr>
-<td>template &lt;typename T > <br>using std::vector&lt; std::vector&lt; <a href="./#function-t">T</a> &gt; &gt;</td>
+<td>template &lt;typename T > <br>using std::vector&lt; std::vector&lt; <a href="../Classes/classvar_1_1matrix.md#function-t">T</a> &gt; &gt;</td>
 <td><strong><a href="./#using-table">table</a></strong> <br>2D vector definition</td>
 </tr>
 </tbody>
@@ -1596,15 +1596,15 @@
 </tr>
 <tr>
 <td>void</td>
+<td><strong><a href="./#function-col_swap">col_swap</a></strong>(int j1, int j2)<br>Colum swap.</td>
+</tr>
+<tr>
+<td>void</td>
 <td><strong><a href="./#function-replace_row">replace_row</a></strong>(int i, std::vector&lt; D &gt; a)<br>Replaces certain row.</td>
 </tr>
 <tr>
 <td>void</td>
 <td><strong><a href="./#function-replace_col">replace_col</a></strong>(int j, std::vector&lt; D &gt; a)<br>Replaces certain colum.</td>
-</tr>
-<tr>
-<td>void</td>
-<td><strong><a href="./#function-col_swap">col_swap</a></strong>(int j1, int j2)<br>Colum swap.</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1636,11 +1636,11 @@
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="./#function-join_row">join_row</a></strong>(<a href="./">matrix</a> other)<br>Combines the rows of another matrix.</td>
+<td><strong><a href="./#function-join_row">join_row</a></strong>(<a href="../Classes/classvar_1_1matrix.md">matrix</a> other)<br>Combines the rows of another matrix.</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="./#function-join_col">join_col</a></strong>(<a href="./">matrix</a> other)<br>Combines the columns of another matrix.</td>
+<td><strong><a href="./#function-join_col">join_col</a></strong>(<a href="../Classes/classvar_1_1matrix.md">matrix</a> other)<br>Combines the columns of another matrix.</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1659,35 +1659,35 @@
 <td><strong><a href="./#function-det">det</a></strong>()<br>Returns the determinant.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-t">T</a></strong>()<br>Transpose of a matrix.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-cofactor">cofactor</a></strong>()<br>Returns cofactor matrix.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-m">M</a></strong>(int i, int j)<br>Minor of a matrix.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-adj">adj</a></strong>()<br>Adjugate of a matrix.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-inv">inv</a></strong>()<br>Returns inverse of a matrix.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-rref">rref</a></strong>()<br>Reduced row echolon form.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-ref">ref</a></strong>()<br>Row echolon form.</td>
 </tr>
 <tr>
-<td><a href="../structvar_1_1matrix_1_1LU/">LU</a></td>
+<td><a href="../Classes/structvar_1_1matrix_1_1LU.md">LU</a></td>
 <td><strong><a href="./#function-plu">plu</a></strong>()<br>PLU decomposition.</td>
 </tr>
 <tr>
@@ -1703,20 +1703,20 @@
 <td><strong><a href="./#function-is_identity">is_identity</a></strong>()<br>Checks if matrix is an identity matrix.</td>
 </tr>
 <tr>
-<td><a href="../classvar_1_1matrix_1_1Col/">Col</a></td>
+<td><a href="../Classes/classvar_1_1matrix_1_1Col.md">Col</a></td>
 <td><strong><a href="./#function-operator[]">operator[]</a></strong>(int i)<br>[][] operator for <code>matrix</code></td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-operator+">operator+</a></strong>(const <a href="./">matrix</a> &amp; other)<br>Matrix addition.</td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-operator+">operator+</a></strong>(const <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other)<br>Matrix addition.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-operator+">operator+</a></strong>(D n)<br><code>matrix+var</code> as <code>var</code> as added to all elements</td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="./#function-operator+=">operator+=</a></strong>(<a href="./">matrix</a> a)<br>Increments current matrix by matrix <code>a</code></td>
+<td><strong><a href="./#function-operator+=">operator+=</a></strong>(<a href="../Classes/classvar_1_1matrix.md">matrix</a> a)<br>Increments current matrix by matrix <code>a</code></td>
 </tr>
 <tr>
 <td>void</td>
@@ -1727,20 +1727,20 @@
 <td><strong><a href="./#function-operator++">operator++</a></strong>(int a)<br>Increment operator.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-operator-">operator-</a></strong>()<br>Negative of a matrix.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-operator-">operator-</a></strong>(const <a href="./">matrix</a> &amp; other)<br>Matrix subtraction.</td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-operator-">operator-</a></strong>(const <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other)<br>Matrix subtraction.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-operator-">operator-</a></strong>(D n)<br><code>matrix-var</code></td>
 </tr>
 <tr>
 <td>void</td>
-<td><strong><a href="./#function-operator-=">operator-=</a></strong>(<a href="./">matrix</a> a)<br>Decrement current matrix by matrix <code>a</code></td>
+<td><strong><a href="./#function-operator-=">operator-=</a></strong>(<a href="../Classes/classvar_1_1matrix.md">matrix</a> a)<br>Decrement current matrix by matrix <code>a</code></td>
 </tr>
 <tr>
 <td>void</td>
@@ -1751,31 +1751,31 @@
 <td><strong><a href="./#function-operator--">operator--</a></strong>(int a)<br>Decrement operator.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-operator*">operator*</a></strong>(const <a href="./">matrix</a> &amp; other)<br>Matrix multiplication.</td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-operator*">operator*</a></strong>(const <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other)<br>Matrix multiplication.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-operator*">operator*</a></strong>(D n)<br><code>matrix*var</code></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-operator*">operator*</a></strong>(D n)<br><code>matrix*var         </code></td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-mathmul">mathmul</a></strong>(const <a href="./">matrix</a> &amp; other)<br>Normal multiplicatoin.</td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-mathmul">mathmul</a></strong>(const <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other)<br>Normal multiplicatoin.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-operator/">operator/</a></strong>(<a href="./">matrix</a> &amp; other)<br>Matrix division using inverse.</td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-operator/">operator/</a></strong>(<a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other)<br>Matrix division using inverse.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-operator/">operator/</a></strong>(D n)<br><code>matrix/var</code></td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-mathdiv">mathdiv</a></strong>(const <a href="./">matrix</a> &amp; other)<br>Normal math division.</td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-mathdiv">mathdiv</a></strong>(const <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other)<br>Normal math division.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-operator()">operator()</a></strong>(int i1, int i2)<br>Returns a sliced matrix.</td>
 </tr>
 <tr>
@@ -1783,7 +1783,7 @@
 <td><strong><a href="./#function-operator()">operator()</a></strong>(int i, int j1, int j2)<br>Column per row slicing.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
 <td><strong><a href="./#function-operator()">operator()</a></strong>(int i1, int i2, int j1, int j2)<br>Row and column slice.</td>
 </tr>
 </tbody>
@@ -1806,7 +1806,7 @@
 <td><strong><a href="./#function-check_row">check_row</a></strong>(int i)<br>checks index for rows</td>
 </tr>
 <tr>
-<td><a href="./#using-table">table</a>&lt; D &gt;</td>
+<td><a href="../Classes/classvar_1_1matrix.md#using-table">table</a>&lt; D &gt;</td>
 <td><strong><a href="./#function-tt">TT</a></strong>()<br>Returns transpose for data.</td>
 </tr>
 <tr>
@@ -1814,12 +1814,12 @@
 <td><strong><a href="./#function-check_size">check_size</a></strong>(int r, int c)<br>Checks other matrix size for operators.</td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#function-mm">MM</a></strong>(int i, int j, <a href="./">matrix</a> &amp; other)<br>Protected minor (used in <code>DET</code>)</td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#function-mm">MM</a></strong>(int i, int j, <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other)<br>Protected minor (used in <code>DET</code>)</td>
 </tr>
 <tr>
 <td>D</td>
-<td><strong><a href="./#function-det">DET</a></strong>(<a href="./">matrix</a> a)<br>Recursive determinant.</td>
+<td><strong><a href="./#function-det">DET</a></strong>(<a href="../Classes/classvar_1_1matrix.md">matrix</a> a)<br>Recursive determinant.</td>
 </tr>
 <tr>
 <td>void</td>
@@ -1837,20 +1837,20 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#friend-operator+">operator+</a></strong>(D n, <a href="./">matrix</a> &amp; other) <br><code>var+matrix</code></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#friend-operator+">operator+</a></strong>(D n, <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other) <br><code>var+matrix</code></td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#friend-operator-">operator-</a></strong>(D n, <a href="./">matrix</a> &amp; other) <br><code>var-matrix</code></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#friend-operator-">operator-</a></strong>(D n, <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other) <br><code>var-matrix</code></td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#friend-operator*">operator*</a></strong>(D n, <a href="./">matrix</a> &amp; other) <br><code>var*matrix</code></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#friend-operator*">operator*</a></strong>(D n, <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other) <br><code>var*matrix         </code></td>
 </tr>
 <tr>
-<td><a href="./">matrix</a></td>
-<td><strong><a href="./#friend-operator/">operator/</a></strong>(D n, <a href="./">matrix</a> &amp; other) <br><code>var/matrix</code></td>
+<td><a href="../Classes/classvar_1_1matrix.md">matrix</a></td>
+<td><strong><a href="./#friend-operator/">operator/</a></strong>(D n, <a href="../Classes/classvar_1_1matrix.md">matrix</a> &amp; other) <br><code>var/matrix</code></td>
 </tr>
 </tbody>
 </table>
@@ -1934,7 +1934,7 @@
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Mainly invoked for the ranged for loop. </p>
-<p><strong>Return</strong>: <code>std::vector&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>std::vector&lt;D&gt;              </code></p>
 <p><strong>Usage</strong>: </p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="o">:</span><span class="w"> </span><span class="n">m</span><span class="p">){</span><span class="w"></span>
 <span class="w">   </span><span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">:</span><span class="w"> </span><span class="n">i</span><span class="p">){</span><span class="w"></span>
@@ -1946,17 +1946,17 @@
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Returns end of data. </p>
-<p><strong>Return</strong>: <code>std::vector&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>std::vector&lt;D&gt;              </code></p>
 <h3 id="function-begin_1">function begin</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>Returns const begin. </p>
-<p><strong>Return</strong>: <code>std::vector&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>std::vector&lt;D&gt;              </code></p>
 <h3 id="function-end_1">function end</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"></span>
 </code></pre></div>
 <p>Returns const end. </p>
-<p><strong>Return</strong>: <code>std::vector&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>std::vector&lt;D&gt;              </code></p>
 <h3 id="function-get_element">function get_element</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">get_element</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"></span>
@@ -1983,7 +1983,7 @@
 <ul>
 <li><strong>i</strong> row index </li>
 </ul>
-<p><strong>Return</strong>: <code>std::vector&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>std::vector&lt;D&gt;              </code></p>
 <p><strong>Usage</strong>: </p>
 <div class="highlight"><pre><span></span><code><span class="n">var</span><span class="o">::</span><span class="n">matrix</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
 <span class="k">auto</span><span class="w"> </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">get_col</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
@@ -1998,7 +1998,7 @@
 <ul>
 <li><strong>j</strong> column index </li>
 </ul>
-<p><strong>Return</strong>: <code>std::vector&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>std::vector&lt;D&gt;              </code></p>
 <h2 id="mutable-methods">Mutable methods</h2>
 <h3 id="function-resize">function resize</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">resize</span><span class="p">(</span><span class="w"></span>
@@ -2118,6 +2118,18 @@
 <p><strong>Usage</strong>: </p>
 <div class="highlight"><pre><span></span><code><span class="n">m</span><span class="p">.</span><span class="n">row_swap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// swaps row 0 with row 1</span>
 </code></pre></div>
+<h3 id="function-col_swap">function col_swap</h3>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">col_swap</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j1</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j2</span><span class="w"></span>
+<span class="p">)</span><span class="w"></span>
+</code></pre></div>
+<p>Colum swap. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>j1</strong> first column </li>
+<li><strong>j2</strong> second column </li>
+</ul>
 <h3 id="function-replace_row">function replace_row</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">replace_row</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"></span>
@@ -2142,18 +2154,6 @@
 <li><strong>j</strong> column index </li>
 <li><strong>a</strong> <code>std::vector</code></li>
 </ul>
-<h3 id="function-col_swap">function col_swap</h3>
-<div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">col_swap</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j1</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j2</span><span class="w"></span>
-<span class="p">)</span><span class="w"></span>
-</code></pre></div>
-<p>Colum swap. </p>
-<p><strong>Parameters</strong>: </p>
-<ul>
-<li><strong>j1</strong> first column </li>
-<li><strong>j2</strong> second column </li>
-</ul>
 <h3 id="function-sort_rows">function sort_rows</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">sort_rows</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="mi">1</span><span class="w"></span>
@@ -2163,8 +2163,8 @@
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>d</strong> details are shown below </li>
-<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();</code></li>
-<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);</code></li>
+<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();           </code></li>
+<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);            </code></li>
 </ul>
 <p><strong>Usage</strong>: </p>
 <div class="highlight"><pre><span></span><code><span class="n">m</span><span class="p">.</span><span class="n">sort_rows</span><span class="p">();</span><span class="w"></span>
@@ -2178,8 +2178,8 @@
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>d</strong> details are shown below </li>
-<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();</code></li>
-<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);</code></li>
+<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();           </code></li>
+<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);            </code></li>
 </ul>
 <h3 id="function-sort_row">function sort_row</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">sort_row</span><span class="p">(</span><span class="w"></span>
@@ -2192,8 +2192,8 @@
 <ul>
 <li><strong>i</strong> row index </li>
 <li><strong>d</strong> details are shown below </li>
-<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();</code></li>
-<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);</code></li>
+<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();           </code></li>
+<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);            </code></li>
 </ul>
 <p><strong>Usage</strong>: </p>
 <div class="highlight"><pre><span></span><code><span class="n">m</span><span class="p">.</span><span class="n">sort_row</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
@@ -2209,8 +2209,8 @@
 <ul>
 <li><strong>j</strong> column index </li>
 <li><strong>d</strong> details are shown below </li>
-<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();</code></li>
-<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);</code></li>
+<li><strong><tt>d</strong> = 1 is accending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows();           </code></li>
+<li><strong><tt>d</strong> = 0 is decending order <span class="arithmatex">\(\rightarrow\)</span> <code>sort_rows(0);            </code></li>
 </ul>
 <h3 id="function-row_op">function row_op</h3>
 <div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">LAMBDA</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
@@ -2252,7 +2252,7 @@
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Exception</p>
-<p>All row and column operations (inserting, removing .. etc) throw an <code>std::invalid_argument</code> if&#58;
+<p>All row and column operations (inserting, removing .. etc) throw an <code>std::invalid_argument                    </code> if&#58;
     1. There is a size mismatch
     2. Invalid index</p>
 </div>
@@ -2606,7 +2606,7 @@
 <span class="w">    </span><span class="n">D</span><span class="w"> </span><span class="n">n</span><span class="w"></span>
 <span class="p">)</span><span class="w"></span>
 </code></pre></div>
-<p><code>matrix*var</code></p>
+<p><code>matrix*var         </code></p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>n</strong> variable multiplying with </li>
@@ -2699,9 +2699,9 @@
 <li><strong>j1</strong> column index 1 (inclusive) </li>
 <li><strong>j2</strong> column index 2 (exclusive) </li>
 </ul>
-<p><strong>Return</strong>: <code>std::vector&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>std::vector&lt;D&gt;              </code></p>
 <ul>
-<li>Condition <code>j2 &gt;= j1</code> must be true.</li>
+<li>Condition <code>j2 &gt;= j1        </code> must be true.</li>
 </ul>
 <h3 id="function-operator_12">function operator()</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="k">operator</span><span class="p">()(</span><span class="w"></span>
@@ -2722,7 +2722,7 @@
 <p><strong>Return</strong>: matrix</p>
 <div class="admonition warning">
 <p class="admonition-title">Exception</p>
-<p>All <code>()</code> operators will throw an <code>std::invalid_argument</code> unless&#58; </p>
+<p>All <code>()</code> operators will throw an <code>std::invalid_argument                    </code> unless&#58; </p>
 <ol>
 <li>
 <p>Index is correct and valid </p>
@@ -2757,7 +2757,7 @@
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="n">table</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">TT</span><span class="p">()</span><span class="w"></span>
 </code></pre></div>
 <p>Returns transpose for data. </p>
-<p><strong>Return</strong>: <code>table&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>table&lt;D&gt;        </code></p>
 <h3 id="function-check_size">function check_size</h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">check_size</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"></span>
@@ -2836,7 +2836,7 @@
 <span class="w">    </span><span class="n">matrix</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="w"></span>
 <span class="p">);</span><span class="w"></span>
 </code></pre></div>
-<p><code>var*matrix</code></p>
+<p><code>var*matrix         </code></p>
 <p><strong>Parameters</strong>: </p>
 <ul>
 <li><strong>n</strong> variable multiplying with </li>
@@ -2858,7 +2858,7 @@
 </ul>
 <p><strong>Return</strong>: <code>matrix</code></p>
 <hr />
-<p>Updated on 10 August 2022 at 22:52:13 EEST</p>
+<p>Updated on 20 August 2022 at 21:24:15 EEST</p>
 
               
             </article>

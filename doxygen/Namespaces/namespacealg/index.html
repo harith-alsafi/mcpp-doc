@@ -674,7 +674,7 @@
 
 
 <h1 id="alg">alg</h1>
-<p>Arithematic solvers.  <a href="#detailed-description">More...</a></p>
+<p>Arithematic functions and solvers.  <a href="#detailed-description">More...</a></p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -708,7 +708,7 @@
 <td><strong><a href="./#function-newton_root">newton_root</a></strong>(LAMBDA f, D x0)</td>
 </tr>
 <tr>
-<td>template &lt;typename D > <br><a href="../../Classes/structalg_1_1ans/">ans</a>&lt; D &gt;</td>
+<td>template &lt;typename D > <br><a href="../Classes/structalg_1_1ans.md">ans</a>&lt; D &gt;</td>
 <td><strong><a href="./#function-poly_root">poly_root</a></strong>(int n, std::vector&lt; D &gt; a)</td>
 </tr>
 <tr>
@@ -721,12 +721,12 @@
 </tr>
 <tr>
 <td>template &lt;typename D > <br>std::vector&lt; D &gt;</td>
-<td><strong><a href="./#function-linear_sim">linear_sim</a></strong>(<a href="../../Classes/classvar_1_1matrix/">var::matrix</a>&lt; D &gt; eq)<br>Solves a system of linear equations expressed as a matrix.</td>
+<td><strong><a href="./#function-linear_sim">linear_sim</a></strong>(<a href="../Classes/classvar_1_1matrix.md">var::matrix</a>&lt; D &gt; eq)<br>Solves a system of linear equations expressed as a matrix.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="detailed-description">Detailed Description</h2>
-<p>Arithematic solvers. </p>
+<p>Arithematic functions and solvers. </p>
 <p>Short for ALGebra </p>
 <h2 id="functions-documentation">Functions Documentation</h2>
 <h3 id="function-root">function root</h3>
@@ -805,10 +805,10 @@
 <p>Will throw exceptions as follows&#58; </p>
 <ol>
 <li>
-<p><code>stdruntime_error</code> <span class="arithmatex">\(\rightarrow \min\)</span> is not smaller than <span class="arithmatex">\(\max\)</span> OR <span class="arithmatex">\(\text{sign}(f(\min)) == \text{sign}(f(\max))\)</span> </p>
+<p><code>stdruntime_error</code> <span class="arithmatex">\(\rightarrow \min\)</span> is not smaller than <span class="arithmatex">\(\max\)</span>  </p>
 </li>
 <li>
-<p><code>stdoverflow_error</code> <span class="arithmatex">\(\rightarrow\)</span> if no solution was found</p>
+<p><code>`stdlogic_error</code> <span class="arithmatex">\(\rightarrow \text{sign}(f(\min)) == \text{sign}(f(\max))\)</span> which means solution doesn't exist</p>
 </li>
 </ol>
 </div>
@@ -831,7 +831,7 @@
 <p>Representing the input</p>
 <div class="arithmatex">\[ \displaylines{\underbrace{\left[\begin{array} \ a_1 &amp; b_1 &amp; c_1 \\ a_2 &amp; b_2 &amp; c_2 \\ a_3 &amp; b_3 &amp; c_3 \\ \end{array}\right]}_A \ \underbrace{\left[\begin{array} \ x_1 \\ x_2 \\ x_3 \\ \end{array}\right]}_x = \underbrace{\left[\begin{array} \ d_1 \\ d_2 \\ d_3 \end{array}\right]}_b \\ eq = \left[\begin{array}{rrr:r} a_1 &amp; b_1 &amp; c_1 &amp; d_1 \\ a_2 &amp; b_2 &amp; c_2 &amp; d_2 \\ a_3 &amp; b_3 &amp; c_3 &amp; d_3 \\ \end{array}\right]} \]</div>
 <hr />
-<p>Updated on 10 August 2022 at 22:52:13 EEST</p>
+<p>Updated on 20 August 2022 at 21:24:15 EEST</p>
 
               
             </article>

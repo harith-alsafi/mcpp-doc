@@ -686,7 +686,7 @@
 <td><strong><a href="../../Namespaces/namespacevar/">var</a></strong> <br>Namespace that contains all variable data types.</td>
 </tr>
 <tr>
-<td><strong><a href="../../Namespaces/namespacelalg/">lalg</a></strong> <br>Contains functions related to matrices.</td>
+<td><strong><a href="../../Namespaces/namespacelalg/">lalg</a></strong> <br>Contains functions related to matrices and linear algebra.</td>
 </tr>
 </tbody>
 </table>
@@ -700,11 +700,11 @@
 </thead>
 <tbody>
 <tr>
-<td>template &lt;typename D > <br><a href="../../Classes/classvar_1_1matrix/">var::matrix</a>&lt; D &gt;</td>
+<td>template &lt;typename D > <br><a href="../Classes/classvar_1_1matrix.md">var::matrix</a>&lt; D &gt;</td>
 <td><strong><a href="./#function-eye">eye</a></strong>(int n)<br>Produeces identity matrix of length <code>n</code></td>
 </tr>
 <tr>
-<td>template &lt;typename D > <br><a href="../../Classes/classvar_1_1matrix/">var::matrix</a>&lt; D &gt;</td>
+<td>template &lt;typename D > <br><a href="../Classes/classvar_1_1matrix.md">var::matrix</a>&lt; D &gt;</td>
 <td><strong><a href="./#function-perms">perms</a></strong>(D a, D b)</td>
 </tr>
 </tbody>
@@ -725,7 +725,7 @@
 <ul>
 <li><strong>D</strong> </li>
 </ul>
-<p><strong>Return</strong>: <code>var::matrix&lt;D&gt;</code></p>
+<p><strong>Return</strong>: <code>var::matrix&lt;D&gt;              </code></p>
 <h3 id="function-perms">function perms</h3>
 <div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 <span class="n">var</span><span class="o">::</span><span class="n">matrix</span><span class="o">&lt;</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">perms</span><span class="p">(</span><span class="w"></span>
@@ -735,16 +735,6 @@
 </code></pre></div>
 <h2 id="source-code">Source code</h2>
 <div class="highlight"><pre><span></span><code><span class="cp">#pragma once</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;complex&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;numeric&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdexcept&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
 
 <span class="c1">// foward declarations</span>
 <span class="k">namespace</span><span class="w"> </span><span class="nn">var</span><span class="w"></span>
@@ -767,14 +757,16 @@
 <span class="w">    </span><span class="n">var</span><span class="o">::</span><span class="n">matrix</span><span class="o">&lt;</span><span class="n">D</span><span class="o">&gt;</span><span class="w"> </span><span class="n">perms</span><span class="p">(</span><span class="n">D</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mathematic/mathematic.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;numerical/vect.hpp&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;variables/others.hpp&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;variables/table.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;variables/matrix.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;variables/point.hpp&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;variables/table.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;variables/tree.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;variables/vecop.hpp&quot;</span><span class="cp"></span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mathematic/mathematic.hpp&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;algebra/solvers.hpp&quot;</span><span class="cp"></span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;numerical/linear.hpp&quot;</span><span class="cp"></span>
@@ -785,7 +777,7 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;communication/signals.hpp&quot;</span><span class="cp"></span>
 </code></pre></div>
 <hr />
-<p>Updated on 10 August 2022 at 22:52:13 EEST</p>
+<p>Updated on 20 August 2022 at 21:24:15 EEST</p>
 
               
             </article>
